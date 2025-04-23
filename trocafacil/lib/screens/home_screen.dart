@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'profile_screen.dart'; // Import the ProfileScreen
+import 'profile_screen.dart';
+import 'add_item_screen.dart';
 
 // Placeholder data for items
 final List<Map<String, dynamic>> _sampleItems = [
@@ -85,8 +86,10 @@ class _HomeScreenState extends State<HomeScreen> {
       floatingActionButton: _selectedIndex == 1 // Show FAB only on 'Meus Itens' tab
           ? FloatingActionButton(
               onPressed: () {
-                // TODO: Implement navigation to add item screen
-                print("Add item button pressed");
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const AddItemScreen()),
+                );
               },
               child: const Icon(Icons.add),
             )

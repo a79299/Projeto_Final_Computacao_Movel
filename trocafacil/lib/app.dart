@@ -14,7 +14,19 @@ class App extends StatelessWidget {
       title: 'TrocaFácil',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue, // Changed to blue
+        primarySwatch: Colors.blue,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF1E88E5), // Azul mais vibrante
+          elevation: 2,
+          iconTheme: IconThemeData(color: Colors.white),
+          titleTextStyle: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+        ),
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          backgroundColor: Colors.white,
+          selectedItemColor: Colors.black,
+          unselectedItemColor: Colors.grey,
+          elevation: 8,
+        ),
         brightness: Brightness.light,
       ),
       initialRoute: '/',
