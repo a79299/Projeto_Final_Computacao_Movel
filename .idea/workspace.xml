@@ -6,15 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7c6824f3-e90b-46e8-bfbd-598da0bffe10" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/trocafacil/android/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/trocafacil/android/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trocafacil/lib/app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/trocafacil/lib/app.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trocafacil/lib/screens/add_item_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/trocafacil/lib/screens/add_item_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trocafacil/lib/screens/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/trocafacil/lib/screens/home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trocafacil/lib/screens/item_detail_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/trocafacil/lib/screens/item_detail_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trocafacil/lib/screens/profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/trocafacil/lib/screens/profile_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trocafacil/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/trocafacil/linux/flutter/generated_plugin_registrant.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trocafacil/linux/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/trocafacil/linux/flutter/generated_plugins.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trocafacil/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/trocafacil/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trocafacil/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/trocafacil/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trocafacil/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/trocafacil/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trocafacil/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/trocafacil/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trocafacil/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/trocafacil/windows/flutter/generated_plugins.cmake" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

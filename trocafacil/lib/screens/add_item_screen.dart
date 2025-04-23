@@ -3,7 +3,9 @@ import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 
 class AddItemScreen extends StatefulWidget {
-  const AddItemScreen({super.key});
+  final Function(Map<String, dynamic>) onItemAdded;
+  
+  const AddItemScreen({super.key, required this.onItemAdded});
 
   @override
   State<AddItemScreen> createState() => _AddItemScreenState();
@@ -35,7 +37,14 @@ class _AddItemScreenState extends State<AddItemScreen> {
 
   void _submitForm() {
     if (_formKey.currentState!.validate() && _imagePath != null) {
-      // TODO: Implementar lógica para salvar o item
+      final newItem = {
+        'title': _titleController.text,
+        'description': _descriptionController.text,
+        'imageUrl': _imagePath,
+        'owner': 'Usuário Atual' // TODO: Implementar sistema de usuários
+      };
+      
+      widget.onItemAdded(newItem);
       Navigator.of(context).pop();
     } else if (_imagePath == null) {
       ScaffoldMessenger.of(context).showSnackBar(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:io';
 
 class ItemDetailScreen extends StatelessWidget {
   const ItemDetailScreen({super.key});
@@ -25,17 +26,23 @@ class ItemDetailScreen extends StatelessWidget {
           children: [
             // Item Image
             Center(
-              child: Image.network(
-                item['imageUrl'] ?? 'https://via.placeholder.com/300/cccccc/969696?text=No+Image',
-                height: 250,
-                width: double.infinity,
-                fit: BoxFit.cover,
-                errorBuilder: (context, error, stackTrace) => Container(
-                  height: 250,
-                  color: Colors.grey[300],
-                  child: const Center(child: Icon(Icons.broken_image, size: 100, color: Colors.grey)),
-                ),
-              ),
+              child: item['imageUrl'] != null
+                  ? Image.file(
+                      File(item['imageUrl']),
+                      height: 250,
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                      errorBuilder: (context, error, stackTrace) => Container(
+                        height: 250,
+                        color: Colors.grey[300],
+                        child: const Center(child: Icon(Icons.broken_image, size: 100, color: Colors.grey)),
+                      ),
+                    )
+                  : Container(
+                      height: 250,
+                      color: Colors.grey[300],
+                      child: const Center(child: Icon(Icons.image_not_supported, size: 100, color: Colors.grey)),
+                    ),
             ),
             const SizedBox(height: 20),
 

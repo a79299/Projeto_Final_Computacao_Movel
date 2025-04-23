@@ -74,14 +74,56 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Center(
       child: Column(
       children: [
-        CircleAvatar(
-          radius: 50,
-          backgroundImage: _imageUrl.isNotEmpty
-              ? NetworkImage(_imageUrl)
-              : null,
-          child: _imageUrl.isEmpty
-              ? const Icon(Icons.person, size: 50)
-              : null,
+        Container(
+          width: 120,
+          height: 120,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            border: Border.all(color: Theme.of(context).primaryColor, width: 2),
+          ),
+          child: Stack(
+            children: [
+              Center(
+                child: CircleAvatar(
+                  radius: 55,
+                  backgroundColor: Colors.grey[200],
+                  backgroundImage: _imageUrl.isNotEmpty
+                      ? FileImage(File(_imageUrl))
+                      : null,
+                  child: _imageUrl.isEmpty
+                      ? const Icon(Icons.person, size: 50, color: Colors.grey)
+                      : null,
+                ),
+              ),
+              Positioned(
+                right: 0,
+                bottom: 0,
+                child: Container(
+                  padding: const EdgeInsets.all(4),
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).primaryColor,
+                    shape: BoxShape.circle,
+                  ),
+                  child: InkWell(
+                    onTap: () async {
+                      final ImagePicker picker = ImagePicker();
+                      final XFile? image = await picker.pickImage(source: ImageSource.gallery);
+                      if (image != null) {
+                        setState(() {
+                          _imageUrl = image.path;
+                        });
+                      }
+                    },
+                    child: const Icon(
+                      Icons.camera_alt,
+                      color: Colors.white,
+                      size: 20,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
         const SizedBox(height: 16),
         Text(
